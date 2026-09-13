@@ -5,10 +5,10 @@ a maki Lua package.
 
 Two things, one per module:
 
-- **Lifecycle state reporting** — Herdr shows every pane's agent as `idle`,
+- **Lifecycle state reporting.** Herdr shows every pane's agent as `idle`,
   `working`, or `blocked`. Instead of letting Herdr scrape maki's status bar,
   this reports the real thing from maki's own event stream.
-- **herdr-link/1 gateway** — cross-agent messaging, peer discovery, and agent
+- **herdr-link/1 gateway.** Cross-agent messaging, peer discovery, and agent
   start/close, driven from inside a Herdr pane, plus a `/herdr` command.
 
 ## Install
@@ -61,7 +61,7 @@ Notes on the design:
 
 - **One pane, one state.** A maki process can host several sessions and Herdr
   tracks one agent per pane, so the reporter publishes the most demanding state
-  across live sessions — `blocked` beats `working` beats `idle`. A background
+  across live sessions: `blocked` beats `working` beats `idle`. A background
   session waiting on input still marks the pane as blocked. When blocked, the
   session's title travels along as `--message`.
 - **No `--seq`, deliberately.** Reports go through `herdr.cli.run`, which waits

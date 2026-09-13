@@ -1,0 +1,12 @@
+# Permission requests for the Lua in this package. Maki asks about these
+# separately from the install prompt, and remembers the answer per package
+# name and source.
+#
+#   env  maki.uv.os_getenv — read HERDR_ENV, HERDR_BIN_PATH, HERDR_PANE_ID
+#   run  maki.fn.jobstart  — drive the herdr CLI
+#
+# Nothing here reads or writes files, and nothing reaches the network.
+
+[permissions]
+env = true
+run = true

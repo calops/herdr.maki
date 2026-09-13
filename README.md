@@ -40,8 +40,9 @@ plugin.toml              permission requests
 | --- | --- |
 | `env` | reading `HERDR_ENV`, `HERDR_BIN_PATH`, `HERDR_PANE_ID` |
 | `run` | driving the `herdr` CLI |
+| `fs_read` | reading `<cwd>/.agents/agent_config.json` for a configured `herdr_link_start` |
 
-No filesystem access, no network. Outside a Herdr-managed pane every module
+No file writes and no network. Outside a Herdr-managed pane every module
 returns early, so the package registers nothing and does nothing.
 
 ## Lifecycle reporting

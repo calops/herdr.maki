@@ -2,11 +2,13 @@
 # separately from the install prompt, and remembers the answer per package
 # name and source.
 #
-#   env: maki.uv.os_getenv for HERDR_ENV, HERDR_BIN_PATH, HERDR_PANE_ID
-#   run: maki.fn.jobstart to drive the herdr CLI
-#
-# Nothing here reads or writes files, and nothing reaches the network.
+#   env:      maki.uv.os_getenv for HERDR_ENV, HERDR_BIN_PATH, HERDR_PANE_ID
+#   run:      maki.fn.jobstart to drive the herdr CLI
+#   fs_read:  reading <cwd>/.agents/agent_config.json for a configured
+#             herdr_link_start; nothing here writes files or touches the
+#             network.
 
 [permissions]
 env = true
 run = true
+fs_read = true

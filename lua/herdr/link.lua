@@ -1152,7 +1152,7 @@ local function open_herdr_report()
         break
       end
       if ev.type == "key" then
-        if ev.key == "q" or ev.key == "esc" or ev.key == "ctrl+c" then
+        if ev.key == "q" or ev.key == "<Esc>" or ev.key == "<C-c>" then
           break
         end
         if ev.key == "r" then
